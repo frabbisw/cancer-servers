@@ -5,7 +5,7 @@ import base64
 from io import BytesIO
 
 #load image
-img = Image.open("balloon.jpg")
+img = Image.open("sam2.jpg")
 
 #pil to base64
 buffered = BytesIO()
@@ -14,7 +14,7 @@ img_str = base64.b64encode(buffered.getvalue())
 
 
 # defining the api-endpoint  
-URL = "http://192.168.0.101:5001/classify"
+URL = "http://192.168.0.101:5001/detect"
 
 # data to be sent to api 
 data = {'sample_image':img_str}

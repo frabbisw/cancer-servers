@@ -22,14 +22,17 @@ def classify_cell(img):
     
     return Y_pred[0][0]
 
-@app.route('/classify', methods=['POST'])
+@app.route('/detect', methods=['POST'])
 def predict_digit():
     img = request.form['sample_image']
     
     img = Image.open(BytesIO(base64.b64decode(img)))
 
-    img.show()
-    classify_cell(img)
+    #img.show()
+    #print(classify_cell(img))
+    ccc = "result: "+str(classify_cell(img))
+    print(ccc)
     
     #return str(predict(im))
-    return "sample: normal"
+    
+    return ccc
