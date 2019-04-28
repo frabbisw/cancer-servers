@@ -1,6 +1,6 @@
 import os
 
-from api.cancer_classify import app
+from api.cancer_detection import app
 
 if __name__ == '__main__':
     app.debug = True
