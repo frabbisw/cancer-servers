@@ -1,16 +1,14 @@
 import os
 
-#from api._01_manual_response_class import app
-# from api._02_make_response_helper import app
-# from api._03_post_method import app
-# from api._04_delete_method import app
-# from api._05_flask_restful_simple import app
 from api.image_receiver import app
-
+# some_fields.py
+import sys
+sys.path.insert(0, '../constants')
+from fields import *
 
 if __name__ == '__main__':
     app.debug = True
     #app.config['DATABASE_NAME'] = 'library.db'
     host = os.environ.get('IP', '0.0.0.0')
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', main_server_port))
     app.run(host=host, port=port)
