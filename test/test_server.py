@@ -5,7 +5,7 @@ import base64
 from io import BytesIO
 
 #load image
-img = Image.open("sam2.jpg")
+img = Image.open("sam1.jpg")
 
 #pil to base64
 buffered = BytesIO()
