@@ -36,5 +36,10 @@ def predict_digit():
 
     print(r.text)
 
-    return r.text
-    #return "sample: normal"
+    if r.text == "0":
+        return "0"
+    else:
+        URL = "http://"+treatment_server_ip+":"+treatment_server_port+"/doctors"
+        data = {"lat":"23","lon":"88"}
+        r = requests.post(url = URL, data = data)
+        return r.text
