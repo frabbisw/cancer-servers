@@ -10,7 +10,7 @@ sys.path.insert(0, '../constants')
 from fields import *
 
 #load image
-img = Image.open("sam1.jpg")
+img = Image.open("sam2.jpg")
 
 #pil to base64
 buffered = BytesIO()

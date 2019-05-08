@@ -36,5 +36,5 @@ def predict_digit():
 
     print(r.text)
 
-    #return str(predict(im))
-    return "sample: normal"
+    return r.text
+    #return "sample: normal"
